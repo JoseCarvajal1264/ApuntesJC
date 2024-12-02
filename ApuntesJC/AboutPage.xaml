@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ApuntesJC.Models"
+             x:Class="ApuntesJC.Views.AboutPage">
+    <ContentPage.BindingContext>
+        <models:About />
+    </ContentPage.BindingContext>
+    
+    <StackLayout Padding="20">
+        <Label Text="José Carvajal"
+               FontSize="24"
+               HorizontalOptions="Center" />
+        
+        <Label Text="Tengo 20 años estudio Software me gusta el valorant y el Bacardi"
+               FontSize="18"
+               HorizontalOptions="Center" />
+        
+        <Image Source="fort.jpg"
+               HeightRequest="500"
+               WidthRequest="250"
+               HorizontalOptions="Center" />
+
+        <Label FontSize="22" FontAttributes="Bold" Text="{Binding Title}" VerticalOptions="End" />
+        <Label FontSize="22" Text="{Binding Version}" VerticalOptions="End" />
+
+        <Label Text="{Binding Message}" />
+
+        <Button Text="Learn more..." Clicked="LearnMore_Clicked" />
+
+    </StackLayout>
+    
+</ContentPage>
+

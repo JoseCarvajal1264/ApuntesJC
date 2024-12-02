@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ApuntesJC.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ApuntesJC.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+            Title="Notes"
+            ContentTemplate="{DataTemplate Views:AllNotesPage}"
+            Icon="{OnPlatform 'alvaro.png', iOS='alvaro.png', MacCatalyst='alvaro.png'}" />
+
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate Views:AboutPage}"
+            Icon="{OnPlatform 'aye.jpg', iOS='aye.jpg', MacCatalyst='aye.jpg'}" />
+          
+
+    </TabBar>
+
+</Shell>
